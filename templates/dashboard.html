@@ -1,0 +1,57 @@
+{% extends "layout.html" %}
+{% block body %}
+
+ <header class="masthead" style="background-image: url('{{url_for('static', filename='img/dashboard-bg.jpg')}}')">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-md-10 mx-auto">
+          <div class="site-heading">
+            <h1>Dashboard</h1>
+            <span class="subheading">Admin panel</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+<div class="container">
+  <h1>Take a Action</h1>
+  <a href="/edit/0"><button class= "btn btn-primary float">add here</button></a>
+   <a href="/logout/"><button class= "btn btn-primary float">logout</button></a>
+   <form action="/uploader/" method="post" enctype="multipart/form-data">
+     <input type="file" name="file1">
+     <button type="submit">Submit</button>
+
+
+   </form>
+  <p></p>            
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>S.no.</th>
+        <th>Title</th>
+        <th>Date</th>
+        <th>Edit</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+
+
+      {% for post in posts %}
+      <tr>
+        <td>{{post.sno}}</td>
+        <td>{{post.title}}</td>
+        <td>{{post.date}}</td>
+        <td><a href="/edit/{{post.sno}}"><button class= "btn btn-primary float">Edit</button></a></td>
+        <td><a href="/delete/{{post.sno}}"><button class= "btn btn-primary float">Delete</button></a></td>
+      </tr>
+    
+      {% endfor %}
+
+    </tbody>
+  </table>
+</div>
+
+{% endblock %}
