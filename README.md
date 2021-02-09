@@ -2,7 +2,7 @@
 
 A blog created with python flask web framework
 
-This blog is created with the help of flask web framework and the template so used is 'Clean Blog' from Bootstrap templates
+This blog is created with the help of Flask web framework and Bootstrap templates. The template used in this project is 'Clean Blog'.
 
 Screenshot of the project.
 
