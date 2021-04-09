@@ -1,6 +1,6 @@
 # Tech-Corner
 
-A blog created with python flask web framework
+A blog created with python flask web framework.
 
 This blog is created with the help of Flask web framework and Bootstrap templates. The template used in this project is 'Clean Blog'.
 
